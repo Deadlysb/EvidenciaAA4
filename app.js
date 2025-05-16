@@ -71,8 +71,8 @@ mongoose.connect(MONGO_URI).then(()=>{
 
 app.post('/values', async (req, res)=>{
     try {
-        const dato = new values(req.body);
-        await dato.save();
+        const nuevoDato = new values(req.body);
+        await nuevoDato.save();
         res.status(201).json({message: 'Se guardó correctamente'});
     } catch (err){
         console.error(err);
