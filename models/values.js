@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
-const valueSchema = new mongoose.Schema({
+const valuesSchema = new mongoose.Schema({
     label: {type:String, required: true},
     data: {type:Number, required: true}
 },{
     timestamps: true
 });
 
-module.exports = mongoose.model('statistics', valueSchema,'values');
+module.exports = mongoose.model('values', valuesSchema);
