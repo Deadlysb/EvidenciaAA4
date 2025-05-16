@@ -58,7 +58,7 @@ mongoose.connect(MONGO_URI).then(()=>{
 *                           label:
 *                               type: string
 *                           data:
-*                               type: integer
+*                               type: number
 *                      required:
 *                           - label
 *                           - data
@@ -73,7 +73,7 @@ app.post('/values', async (req, res)=>{
     try {
         const dato = new values(req.body);
         await dato.save();
-        res.status(200).json({message: 'Se guardó correctamente'});
+        res.status(201).json({message: 'Se guardó correctamente'});
     } catch (err){
         console.error(err);
         res.status(500).json({message: 'Error al guardar'});
