@@ -20,7 +20,7 @@ const swaggerOption = {
         },
         servers: [
             {
-                url: ''
+                url: 'https://evidenciaaa4-production.up.railway.app'
             },
             {
                 url: 'http://localhost:5000'
